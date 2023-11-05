@@ -17,11 +17,10 @@ import javax.sql.DataSource;
 @RequiredArgsConstructor
 @Configuration
 public class MyBatisConfiguration {
-
-    private final ApplicationContext applicationContext;
     public static final String BASE_PACKAGE = "com.kbo.*/**";
-    //public static final String CONFIG_LOCATION_PATH = "classpath:config/mybatis-config.xml";
-    public static final String MAPPER_LOCATIONS_PATH = "com.kbo.*/**.xml";
+    private final ApplicationContext applicationContext;
+
+
     // SqlSessionFactory 객체 생성을 위해서 set 할 DataSource Bean 등록
     @Bean
     public DataSource dataSource (){
@@ -37,8 +36,10 @@ public class MyBatisConfiguration {
         // 1. FactoryBean 클래스 이용하는 방법(org.mybatis:mybatis-spring:1.3.2)
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource());
-        sqlSessionFactoryBean.setConfigLocation(applicationContext.getResource("classpath:mybatis/mybatis-config.xml"));
+        sqlSessionFactoryBean.setConfigLocation(applicationContext.getResource("classpath:config/mybatis-config.xml"));
         sqlSessionFactoryBean.setMapperLocations(applicationContext.getResources("com.kbo.*/**.xml"));
+
+
         // sqlSessionFactoryBean.setConfigurationProperties();
         sqlSessionFactory = sqlSessionFactoryBean.getObject();
 
