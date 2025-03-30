@@ -23,18 +23,20 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+    // 가장 기본 dependency, 하위에 5개의 dependency 가 종속되어 있음
+     implementation("org.springframework.boot:spring-boot-starter-web:3.1.2")
 
-    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc
+    // JDBC 관련 사용
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.7.9'
 
-
-    // https://mvnrepository.com/artifact/org.mybatis/mybatis
+    // MyBatis 사용 1
     implementation 'org.mybatis:mybatis:3.4.6'
 
-// https://mvnrepository.com/artifact/org.mybatis/mybatis-spring
+    // MyBatis 사용 2
     implementation 'org.mybatis:mybatis-spring:1.3.2'
 
+    // HTML 파일 안떠서 타임리프 추가
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'

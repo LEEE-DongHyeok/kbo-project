@@ -7,9 +7,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class BoardController {
 
-    @GetMapping("")
+    @GetMapping("/")
     public ModelAndView list(){
-        ModelAndView mv = new ModelAndView("/board/list.html");
+        ModelAndView mv = new ModelAndView("board/list");
         return mv;
     }
 }

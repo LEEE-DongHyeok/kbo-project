@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
-
+// Mapper Scan 정보 주입 (탐색할 패키지, 표기할 커스텀 어노테이션, SqlSessionFactory 객체의 레퍼런스 지정)
 @MapperScan(basePackages = MyBatisConfiguration.BASE_PACKAGE, annotationClass = MyBatisCustomAnnotation.class, sqlSessionFactoryRef = "sqlSessionFactory")
 @RequiredArgsConstructor
 @Configuration
@@ -33,12 +33,12 @@ public class MyBatisConfiguration {
         SqlSessionFactory sqlSessionFactory;
 
 //--------------------------------------------------------------------------------------------------
-        // 1. FactoryBean 클래스 이용하는 방법(org.mybatis:mybatis-spring:1.3.2)
+
+        // 1. FactoryBean 클래스 이용하는 방법 (org.mybatis:mybatis-spring:1.3.2)
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource());
         sqlSessionFactoryBean.setConfigLocation(applicationContext.getResource("classpath:config/mybatis-config.xml"));
         sqlSessionFactoryBean.setMapperLocations(applicationContext.getResources("com.kbo.*/**.xml"));
-
 
         // sqlSessionFactoryBean.setConfigurationProperties();
         sqlSessionFactory = sqlSessionFactoryBean.getObject();
