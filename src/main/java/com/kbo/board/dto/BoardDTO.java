@@ -4,9 +4,7 @@ import lombok.Data;
 
 @Data
 public class BoardDTO {
-    Long id;
-
-    String title;
-
-    String content;
+    private Long id;
+    private String title;
+    private String content;
 }

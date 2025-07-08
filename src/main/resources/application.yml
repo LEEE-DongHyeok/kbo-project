@@ -1,0 +1,17 @@
+spring:
+  # DataSource 설정
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/KBO
+    username: root
+    password: admin123!@#
+  # Thymeleaf 설정
+  thymeleaf:
+#    # 개발 시에는 즉각적인 코드 변경을 보기 위해 false 가 유리
+#    cache: false
+#    # /templates/thymeleaf 폴더 아래에는 있는 파일만 인식 (주석처리)
+#    prefix: classpath:templates/thymeleaf
+#    # return 타입 설정으로, 따라서 Controller 단에서 반환할 파일 이름에 .html 제외 가능
+#    suffix: html
+mybatis:
+  mapper-locations: classpath*:com/kbo/**/*.xml

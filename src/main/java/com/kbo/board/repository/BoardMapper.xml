@@ -6,6 +6,5 @@
                TITLE AS TITLE,
                CONTENT AS CONTENT
         FROM  BOARD
-
     </select>
 </mapper>
