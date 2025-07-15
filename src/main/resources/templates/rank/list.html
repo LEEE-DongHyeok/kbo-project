@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KBO | 한국프로야구협회</title>
+</head>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<script src="../js/bootstrap.min.js"></script>
+<body>
+<h1>순위</h1>
+<table>
+    <tr>
+        <td>순위</td>
+        <td>구단</td>
+        <td>경기수</td>
+        <td>승</td>
+        <td>무</td>
+        <td>패</td>
+        <td>승률</td>
+        <td>승차</td>
+    </tr>
+    <tr th:each="rank , index: ${rankList}">
+        <td th:text="${rank.rankSeq}"></td>
+        <td th:text="${rank.clubName}"></td>
+        <td th:text="${rank.games}"></td>
+        <td th:text="${rank.wins}"></td>
+        <td th:text="${rank.loses}"></td>
+        <td th:text="${rank.draws}"></td>
+        <td th:text="${rank.percentage}"></td>
+        <td th:text="${rank.gameBehind}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
+<script>
+
+</script>

@@ -7,37 +7,17 @@
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <script src="../js/bootstrap.min.js"></script>
 <body>
-    <h1>순위</h1>
+    <h1>자유 게시판</h1>
     <table>
-        <th>
-            <td>순위</td>
+        <tr>
+            <td>이름</td>
             <td>구단</td>
             <td>경기수</td>
-            <td>승</td>
-            <td>무</td>
-            <td>패</td>
-            <td>승률</td>
-            <td>승차</td>
-        </th>
-        <tr>
-            <td>1</td>
-            <td>SSG랜더스</td>
-            <td>144</td>
-            <td>90</td>
-            <td>4</td>
-            <td>50</td>
-            <td>0.720</td>
-            <td>0</td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>롯데자이언츠</td>
-            <td>144</td>
-            <td>86</td>
-            <td>2</td>
-            <td>56</td>
-            <td>0.696</td>
-            <td>4</td>
+        <tr th:each="event , index: ${events}">
+            <td th:text="${index.index}">#</td>
+            <td th:text="${event.name}">이벤트 이름</td>
+            <td th:text="${event.limitOfEnrollment}">100</td>
         </tr>
     </table>
 
@@ -47,5 +27,5 @@
 </body>
 </html>
 <script>
-
+    document.addEventListener()
 </script>

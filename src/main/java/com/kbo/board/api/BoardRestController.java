@@ -14,27 +14,26 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 public class BoardRestController {
-    private final SqlSessionFactory sqlSessionFactory;
     private final BoardService boardService;
-    List<BoardDTO> boardList = new ArrayList<>();
+//    private final SqlSessionFactory sqlSessionFactory;
+//    List<BoardDTO> boardList = new ArrayList<>();
 
     @GetMapping("/api/board/list")
-    public List<BoardDTO> selectBoardList(){
+    public List<BoardDTO> selectBoardList() {
+        return boardService.selectBoardList();
 
-
-        try(SqlSession session = sqlSessionFactory.openSession()){
-//            // 테스트 코드
+//        try(SqlSession session = sqlSessionFactory.openSession()){
+//            // 테스트 코드1
 //            BoardDTO boardDTO = session.selectOne("com.kbo.board.repository.BoardMapper.selectBoardList");
 //            System.out.println("세션 확인 : " + session);
 //            System.out.println("데이터 확인 : " + boardDTO);
+//
+//            // 테스트 코드2
+//            boardList = boardService.selectBoardList();
+//            System.out.println("데이터 확인 : " + boardList);
+//        }catch(Exception e) {
+//            e.printStackTrace();
+//        }
 
-            boardList = boardService.selectBoardList();
-            System.out.println("데이터 확인 : " + boardList);
-
-        }catch(Exception e) {
-            e.printStackTrace();
-        }
-
-        return boardList;
     }
 }
