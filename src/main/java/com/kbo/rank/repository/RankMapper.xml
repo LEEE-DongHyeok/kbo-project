@@ -3,7 +3,7 @@
 <mapper namespace="com.kbo.rank.repository.RankMapper">
     <select id="selectRankList" resultType="com.kbo.rank.dto.RankDTO">
         SELECT RANK_SEQ AS RANK_SEQ,
-               CLUB_NAME AS CLUB_NAME,
+               CLUB_CODE AS CLUB_CODE,
                GAMES AS GAMES,
                WINS AS WINS,
                LOSES AS LOSES,
