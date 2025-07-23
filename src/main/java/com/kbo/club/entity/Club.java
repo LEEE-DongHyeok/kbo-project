@@ -12,7 +12,7 @@ public class Club {
     @Column(name = "CLUB_NAME")
     private String clubName;
 
-    @Column(name = "CLUB_NAME")
+    @Column(name = "LOCATION")
     private String location;
 
     @Column(name = "CLUB_COLOR")

@@ -7,25 +7,26 @@
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <script src="../js/bootstrap.min.js"></script>
 <body>
-    <h1>자유 게시판</h1>
-    <table>
-        <tr>
-            <td>이름</td>
-            <td>구단</td>
-            <td>경기수</td>
-        </tr>
-        <tr th:each="event , index: ${events}">
-            <td th:text="${index.index}">#</td>
-            <td th:text="${event.name}">이벤트 이름</td>
-            <td th:text="${event.limitOfEnrollment}">100</td>
-        </tr>
-    </table>
-
+    <div class="row">
+        <h1>자유 게시판</h1>
+        <table class="table">
+            <tr>
+                <td>게시물번호</td>
+                <td>제목</td>
+                <td>내용</td>
+            </tr>
+            <tr th:each="board , index: ${boardList}">
+                <td th:text="${board.id}"></td>
+                <td th:text="${board.title}"></td>
+                <td th:text="${board.content}"></td>
+            </tr>
+        </table>
+    </div>
     <input type="text" >
 
     <button id="register" class="btn-primary">글 등록</button>
 </body>
 </html>
 <script>
-    document.addEventListener()
+
 </script>

@@ -23,7 +23,7 @@ public class BoardController {
         List<BoardDTO> boardList = boardService.selectBoardList();
 
         // addObject 메소드로 Object 를 삽입할 때는 별칭처럼 불릴 AttributeName 을 넣어줘야 인식이 됨
-        mv.addObject(boardList);
+        mv.addObject("boardList", boardList);
 
         logger.debug(mv.toString());
         return mv;
