@@ -13,5 +13,12 @@ spring:
 #    prefix: classpath:templates/thymeleaf
 #    # return 타입 설정으로, 따라서 Controller 단에서 반환할 파일 이름에 .html 제외 가능
 #    suffix: html
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        # 테이블명을 기입한 대문자 그대로 생성(없을 시 소문자로 변환됨)
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
 mybatis:
   mapper-locations: classpath*:com/kbo/**/*.xml

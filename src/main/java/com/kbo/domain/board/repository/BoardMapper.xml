@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kbo.domain.board.repository.BoardMapper">
+    <select id="selectBoardList" resultType="com.kbo.domain.board.dto.BoardDTO">
+        SELECT POST_ID AS ID,
+               TITLE AS TITLE,
+               CONTENT AS CONTENT
+        FROM  BOARD
+    </select>
+</mapper>
