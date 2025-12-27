@@ -1,0 +1,94 @@
+/* 전체 화면 기본 세팅 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Sans KR', Arial, sans-serif;
+}
+
+/* 로그인 박스 */
+.login-box {
+    width: 360px;
+    padding: 32px 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* 로고 영역 */
+.logo {
+    margin-bottom: 24px;
+}
+
+.logo img {
+    width: 140px;
+    height: auto;
+}
+
+/* 입력 폼 */
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 아이디 / 비밀번호 입력창 */
+.login-box input {
+    height: 44px;
+    padding: 0 12px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.login-box input::placeholder {
+    color: #b0b4b8;
+}
+
+.login-box input:focus {
+    border-color: #0066cc;
+}
+
+/* 로그인 버튼 */
+.login-box button {
+    height: 46px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #0066cc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-box button:hover {
+    background-color: #0052a3;
+}
+
+/* 하단 링크 영역 (선택) */
+.login-footer {
+    margin-top: 18px;
+    font-size: 13px;
+}
+
+.login-footer a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
