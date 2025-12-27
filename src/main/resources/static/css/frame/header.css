@@ -1,77 +1,24 @@
-/* 기본 스타일 설정 */
-* {
-    margin: 0;
+/* 메뉴 리스트를 가로로 정렬 */
+ul.header {
+    list-style: none; /* 기본 점 없애기 */
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    display: flex; /* 가로 정렬 */
+    gap: 15px; /* 메뉴 사이 간격 */
 }
 
-body {
-    font-family: Arial, sans-serif;
+/* 각 메뉴 항목 스타일 */
+ul.header li {
+    /* 기본 스타일 유지 */
 }
 
-/* 헤더 스타일 */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 50px;
-    border-bottom: 2px solid #ccc;
-}
-
-.navigation ul {
-    display: flex;
-    list-style: none;
-}
-
-.navigation li {
-    margin-right: 20px;
-}
-
-.navigation a {
+/* 링크 스타일 */
+ul.header li a {
     text-decoration: none;
-    color: #333;
+    color: blue; /* 필요에 따라 색상 조정 */
     font-weight: bold;
-    font-size: 16px;
 }
 
-.navigation a:hover {
-    color: #0052cc;
-}
-
-/* 드롭다운 메뉴 */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding: 10px 0;
-}
-
-.dropdown-menu ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-.dropdown-menu li {
-    padding: 8px 20px;
-}
-
-.dropdown-menu li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-}
-
-.dropdown-menu li a:hover {
-    color: #0052cc;
-}
-
-/* 드롭다운 활성화 */
-.header:hover .dropdown-menu {
-    display: block;
+ul.header li a:hover {
+    text-decoration: underline;
 }
