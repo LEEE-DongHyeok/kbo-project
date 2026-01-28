@@ -1,4 +1,4 @@
-package com.kbo.domain.ranking;
+package com.kbo.domain.page;
 
 import com.kbo.domain.ranking.dto.RankingDTO;
 import com.kbo.domain.ranking.service.RankingService;

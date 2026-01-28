@@ -1,4 +1,4 @@
-package com.kbo.domain.board;
+package com.kbo.domain.page;
 
 import com.kbo.domain.board.dto.BoardDTO;
 import com.kbo.domain.board.service.BoardService;

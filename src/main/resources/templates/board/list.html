@@ -11,25 +11,25 @@
         <div class="logo">
     </div>
     <div class="row">
-        <h1>자유 게시판</h1>
-        <table class="table">
-            <tr>
-                <td>게시물번호</td>
-                <td>제목</td>
-                <td>내용</td>
-            </tr>
-            <tr th:each="board , index: ${boardList}">
-                <td th:text="${board.id}"></td>
-                <td th:text="${board.title}"></td>
-                <td th:text="${board.content}"></td>
-            </tr>
-        </table>
+        <div class="col-md-12">
+            <h1>자유 게시판</h1>
+            <table class="table">
+                <tr>
+                    <td>게시물번호</td>
+                    <td>제목</td>
+                    <td>내용</td>
+                </tr>
+                <tr th:each="board , index: ${boardList}">
+                    <td th:text="${board.id}"></td>
+                    <td th:text="${board.title}"></td>
+                    <td th:text="${board.content}"></td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <input type="text" >
-
-    <button id="register" class="btn-primary">글 등록</button>
+    <div class="footer">
+        <input type="text">
+        <button id="register" class="btn-primary">글 등록</button>
+    </div>
 </body>
 </html>
-<script>
-
-</script>

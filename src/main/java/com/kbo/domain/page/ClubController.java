@@ -1,4 +1,4 @@
-package com.kbo.domain.club;
+package com.kbo.domain.page;
 
 import com.kbo.domain.club.service.ClubService;
 import lombok.RequiredArgsConstructor;
